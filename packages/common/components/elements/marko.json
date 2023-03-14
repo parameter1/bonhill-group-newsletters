@@ -20,16 +20,13 @@
     },
     "@link-style": "object"
   },
-  "<common-list-header-element>": {
-    "template": "./list-header.marko"
-  },
-  "<common-logo-element>": {
-    "template": "./logo.marko"
-  },
   "<common-table-hr-element>": {
     "template": "./table-hr.marko"
   },
   "<common-table-spacer-element>": {
     "template": "./table-spacer.marko"
+  },
+  "<common-list-header-element>": {
+    "template": "./list-header.marko"
   }
 }

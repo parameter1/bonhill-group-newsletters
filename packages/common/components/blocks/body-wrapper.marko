@@ -1,52 +1,46 @@
 $ const { newsletter, date } = input;
 
-<table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tbody>
-    <tr>
-      <td align="center" valign="top">
-        <table role="presentation" width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap000">
-          <tbody>
-            <tr>
-              <td align="center" valign="top">
-                <table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                  <tbody>
+<div style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:#fff;margin:0 auto;max-width:600px">
+  <div style="align:center;font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent">
+    <div class="" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:rgba(0,0,0,0);margin:0;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0">
+      <!--[if false]>
+        <div style="display: none"><![endif]--><!--[if gte mso 9]></div>
+        <div style="background-color: transparent; border:none;">
+          <![endif]-->
+          <!--[if false]>
+        </div>
+      <![endif]-->
+      <div style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent">
 
-                    <!-- View online block -->
-                    <if(input.viewOnline)>
-                      <${input.viewOnline} />
-                    </if>
-                    <else>
-                      <common-view-online-block />
-                    </else>
+        <!-- View online block -->
+        <if(input.viewOnline)>
+          <${input.viewOnline} />
+        </if>
+        <else>
+          <common-view-online-block />
+        </else>
 
-                    <!-- Header block -->
-                    <if(input.header)>
-                      <${input.header} />
-                    </if>
-                    <else>
-                      <common-header-block date=date newsletter=newsletter />
-                    </else>
+        <!-- Header block -->
+        <if(input.header)>
+          <${input.header} />
+        </if>
+        <else>
+          <common-header-block date=date newsletter=newsletter />
+        </else>
 
 
-                    <if(input.body)>
-                      <${input.body} />
-                    </if>
+        <if(input.body)>
+          <${input.body} />
+        </if>
 
-                    <!-- Footer block -->
-                    <if(input.footer)>
-                      <${input.footer} />
-                    </if>
-                    <else>
-                      <common-footer-block date=date newsletter=newsletter />
-                    </else>
-
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <!-- Footer block -->
+        <if(input.footer)>
+          <${input.footer} />
+        </if>
+        <else>
+          <common-footer-block date=date newsletter=newsletter />
+        </else>
+      </div>
+    </div>
+  </div>
+</div>

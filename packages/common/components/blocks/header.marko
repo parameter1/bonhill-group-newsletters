@@ -6,6 +6,7 @@ $ const { newsletter, date } = input;
 
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const name = (newsletterConfig.name || newsletter.name);
+$ const tagline = newsletterConfig.tagline;
 
 $ const alt = defaultValue(input.alt, newsletter.name);
 
@@ -19,19 +20,10 @@ $ const imgStyle = {
 };
 
 <div class="emptyContainer" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:rgba(0,0,0,0);margin:0;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0">
-  <!--[if false]>
-    <div style="display: none"><![endif]--><!--[if gte mso 9]></div>
-    <div style="background-color: transparent; border:none;"><![endif]--><!--[if false]></div>
-  <![endif]-->
+  <!--[if false]><div style="display: none"><![endif]--><!--[if gte mso 9]></div><div style="background-color: transparent; border:none;"><![endif]--><!--[if false]></div><![endif]-->
   <table class="outer" style="border-collapse:collapse;width:600px;display:block" cellspacing="0" cellpadding="0" align="center" role="presentation">
     <tbody>
-      <!--[if false]>
-        <div style="display: none"><![endif]--><!--[if gte mso 9]>
-          <tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0">
-            <td>&nbsp;</td>
-          </tr><![endif]--><!--[if false]>
-        </div>
-      <![endif]-->
+      <!--[if false]><div style="display: none"><![endif]--><!--[if gte mso 9]><tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0"><td>&nbsp;</td></tr><![endif]--><!--[if false]></div><![endif]-->
       <tr>
         <td style="padding:15px 10px 5px;background-color:rgba(0,0,0,0);border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%">
           <table style="display:block;width:100%;border-collapse:collapse" class="containerWrapper tbContainer multi single-line" cellspacing="0" cellpadding="0" role="presentation">
@@ -63,13 +55,7 @@ $ const imgStyle = {
                     <tbody>
                       <tr>
                         <td class="columnContainer inner ui-sortable" style="min-width:5px;padding:5px;vertical-align:bottom;word-wrap:break-word;word-break:break-word;height:49px;min-height:49px;background-color:rgba(0,0,0,0);border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%" align="left">
-                          <!--[if false]>
-                            <div style="display: none"><![endif]--><!--[if gte mso 9]>
-                              <table width="182" style="table-layout: fixed;border-collapse: collapse; width: 182px; padding-top: 5px;padding-bottom: 5px; padding-left: 0px;padding-right: 0px;" cellpadding="0" cellspacing="0" border="0">
-                                <tr>
-                                  <td valign="top"><![endif]--><!--[if false]>
-                            </div>
-                          <![endif]-->
+                          <!--[if false]><div style="display: none"><![endif]--><!--[if gte mso 9]><table width="182" style="table-layout: fixed;border-collapse: collapse; width: 182px; padding-top: 5px;padding-bottom: 5px; padding-left: 0px;padding-right: 0px;" cellpadding="0" cellspacing="0" border="0"><tr><td valign="top"><![endif]--><!--[if false]></div><![endif]-->
                           <div class="none" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;margin:0;padding:0">
                             <div class="dividerWrapper" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;padding-top:5px;padding-bottom:5px" align="center">
                               <table style="padding:0;margin:0;width:100%;border-collapse:collapse" class="" cellspacing="0" cellpadding="0">
@@ -88,13 +74,7 @@ $ const imgStyle = {
                               </table>
                             </div>
                           </div>
-                          <!--[if false]>
-                            <div style="display: none"><![endif]--><!--[if gte mso 9]>
-                              </td>
-                              </tr>
-                              </table><![endif]--><!--[if false]>
-                            </div>
-                          <![endif]-->
+                          <!--[if false]><div style="display: none"><![endif]--><!--[if gte mso 9]></td></tr></table><![endif]--><!--[if false]></div> <![endif]-->
                           <div style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;padding:0;margin:0">
                             <div class="imageWrapper" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent" align="Center">
                               <marko-newsletter-imgix
@@ -116,30 +96,15 @@ $ const imgStyle = {
           </table>
         </td>
       </tr>
-      <!--[if false]>
-        <div style="display: none"><![endif]--><!--[if gte mso 9]>
-          <tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0">
-            <td>&nbsp;</td>
-          </tr><![endif]--><!--[if false]>
-        </div>
-      <![endif]-->
+      <!--[if false]><div style="display: none"><![endif]--><!--[if gte mso 9]><tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0"><td>&nbsp;</td></tr><![endif]--><!--[if false]></div><![endif]-->
     </tbody>
   </table>
 </div>
 <div class="" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:rgba(0,0,0,0);margin:0;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0">
-  <!--[if false]>
-    <div style="display: none"><![endif]--><!--[if gte mso 9]></div>
-    <div style="background-color: transparent; border:none;"><![endif]--><!--[if false]></div>
-  <![endif]-->
+  <!--[if false]><div style="display: none"><![endif]--><!--[if gte mso 9]></div><div style="background-color: transparent; border:none;"><![endif]--><!--[if false]></div> <![endif]-->
   <table class="outer" style="border-collapse:collapse;width:600px;display:block" cellspacing="0" cellpadding="0" align="center" role="presentation">
     <tbody>
-      <!--[if false]>
-        <div style="display: none"><![endif]--><!--[if gte mso 9]>
-          <tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0">
-            <td>&nbsp;</td>
-          </tr><![endif]--><!--[if false]>
-        </div>
-      <![endif]-->
+      <!--[if false]><div style="display: none"><![endif]--><!--[if gte mso 9]><tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0"><td>&nbsp;</td></tr><![endif]--><!--[if false]></div><![endif]-->
       <tr>
         <td style="padding:5px 0;background-color:rgba(0,0,0,0);border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%">
           <table style="display:block;width:100%;border-collapse:collapse" class="containerWrapper tbContainer" cellspacing="0" cellpadding="0" role="presentation">
@@ -151,20 +116,11 @@ $ const imgStyle = {
                       <tr>
                         <td class="inner ui-sortable" style="min-width:5px;padding:5px 10px;vertical-align:top;word-wrap:break-word;word-break:break-word;background-color:#000;border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%" align="left">
                           <div style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;margin:0">
-                            <!--[if false]>
-                              <div style="display: none"> <![endif]--><!--[if gte mso 9]>
-                                <p style="margin: 0px; padding: 0px; line-height: 125%;">
-                                  <span style="display: inline-block; color: rgb(255, 255, 255);">
-                                    <span style="display: inline-block; font-size: 13px;"><strong>The pulse of the financial advisory industry</strong></span>
-                                  </span>
-                                </p> <![endif]--><!--[if false]>
-                              </div>
-                              <![endif]-->
-                            <!--[if !mso]> <!---->
+                            <!--[if false]><div style="display: none"> <![endif]--><!--[if gte mso 9]><p style="margin: 0px; padding: 0px; line-height: 125%;"><span style="display: inline-block; color: rgb(255, 255, 255); font-weight:bold;"><span style="display: inline-block; font-size: 13px; font-weight: bold;">${tagline}</span></span></p> <![endif]--><!--[if false]></div><![endif]--><!--[if !mso]> <!---->
                             <p style="margin:0;padding:0;line-height:20px;mso-line-height-rule:at-least">
-                              <span style="line-height:125%;display:inline-block;color:#fff">
-                                <span style="line-height:125%;display:inline-block;font-size:13px">
-                                  <strong>The pulse of the financial advisory industry</strong>
+                              <span style="line-height:125%;display:inline-block;color:#fff;font-weight:bold;">
+                                <span style="line-height:125%;display:inline-block;font-size:13px;font-weight:bold;">
+                                  ${tagline}
                                 </span>
                               </span>
                             </p>
@@ -180,39 +136,7 @@ $ const imgStyle = {
           </table>
         </td>
       </tr>
-      <!--[if false]>
-        <div style="display: none"> <![endif]--><!--[if gte mso 9]>
-          <tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0">
-            <td>&nbsp;</td>
-          </tr> <![endif]-->
-          <!--[if false]>
-        </div>
-      <![endif]-->
+      <!--[if false]><div style="display: none"> <![endif]--><!--[if gte mso 9]><tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0"><td>&nbsp;</td></tr> <![endif]--><!--[if false]></div><![endif]-->
     </tbody>
   </table>
 </div>
-<!-- <tr>
-  <td align="center" valign="top" bgcolor="#2f3031">
-    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-      <common-table-spacer-element height="12" />
-      <tr>
-        <td align="center" valign="top">
-          <table role="presentation" width="610" border="0" cellspacing="0" cellpadding="0" class="wrap003">
-            <tr>
-              <td align="left" valign="top" width="15"></td>
-              <td align="left" valign="top" width="130" style="padding-top: 5px">
-                <common-logo-element newsletter=newsletter />
-              </td>
-              <td align="left" valign="top" width="24"></td>
-              <td align="left" valign="middle" style="font-size: 26px;line-height: 40px;color: #ffffff;font-weight: 700;" class="font1">
-                ${name}
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <common-table-spacer-element height="9" />
-    </table>
-  </td>
-</tr>
-<common-table-spacer-element /> -->

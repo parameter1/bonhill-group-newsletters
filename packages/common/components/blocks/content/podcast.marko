@@ -1,0 +1,48 @@
+<!-- import { get, getAsArray } from "@parameter1/base-cms-object-path";
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+import { URLSearchParams } from "url";
+
+$ const { content, urlParams } = input;
+
+$ const continueReading = defaultValue(input.continueReading, false);
+$ const queryString = (urlParams && content.type !== 'promotion') ? `?${new URLSearchParams(urlParams)}` : "";
+$ const contentUrl = `${content.siteContext.url}${queryString}` -->
+$ const { content, contentUrl, continueReading } = input;
+
+$ const podcastTagStyle = {
+  "font-size": "14px",
+  "line-height": "18px",
+  "color": "#e31e30!important",
+  "font-family": "'Arial', 'Helvetica', sans-serif",
+  "font-weight": "bold",
+  "text-align": "left",
+  "text-decoration": "none",
+  "text-transform": "uppercase",
+  "margin": "0 0 2px 0"
+};
+
+<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+  <td class="eight sub-columns" style="border-collapse: collapse !important; vertical-align: top; text-align: left; min-width: 0px; width: 100%; padding: 0 0 5px 0px;" align="left" valign="top">
+    $ const podcastTag = "InvestmentNews Podcast";
+    <a align="left" style=podcastTagStyle>${podcastTag}</a>
+  </td>
+</tr>
+<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+  <td class="eight sub-columns" style="border-collapse: collapse !important; vertical-align: top; text-align: left; min-width: 0px; width: 100%; padding: 0 0 5px 0px;" align="left" valign="top">
+    <a style="font-size: 18px; line-height: 22px; color: #000000 !important;  font-family: 'Arial', 'Helvetica', sans-serif; font-weight: bold; text-align: left; text-decoration: none; margin: 0 0 4px; padding: 0;" align="left" href=contentUrl>
+      $!{content.name}
+    </a>
+    <span>&nbsp;&nbsp;
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAYAAAACsSQRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ4IDc5LjE2NDAzNiwgMjAxOS8wOC8xMy0wMTowNjo1NyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDphNDdkYzJjMi02MWZhLTZmNDUtOGFmZC1iMjU4YTllNjM0OGMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzZGQzM5QTQxMUIyMTFFQUFFMjZCMzdCMkMyODU5Q0QiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzZGQzM5QTMxMUIyMTFFQUFFMjZCMzdCMkMyODU5Q0QiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjAgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDlmY2E1MDctOWRlZS02NzQ3LWI2YjEtOWI1NTE2OGNmNmY3IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NzFjNDQ3ODItOTcyYy1mYzRhLWI2MDQtZDJmZDhlYmMzMjM1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+75U6vwAAAQJJREFUeNpiTExKYYACViCuA+IYIP4HxHOBuAPKZpg3dzYDLsCCxM4B4hokfisQv4QahhcwIbH9sMgHMhABmHCwYYCZWENA3hAC4t9Y5H8BsQgQJxMypAmIZXEYAhJTBOI8QoZ8gcYAIw75v0D8lZAhjFBD/uDwDhM0+vEa8h6IjYB4CRb5hUBsCTUMbzqZCcTdQKwDxFlAnAb1wiQgvgDEy4gJk+lAfBiITwHxQ2jaCIGGFUhsIxAvJuQSUHiEAXEl1HYuqNxnIO4F4gmE0gks2f8H4jaoplXQ2IjHEe148w4I/ATiF1BDiDIA3ZAqIHYEYkNowOoC8XYg7iNkCECAAQDDGDhHKSx39wAAAABJRU5ErkJggg==" style="padding-left: 2px;">
+    </span>
+  </td>
+</tr>
+<tr style="vertical-align: top; text-align: left; padding: 0;" align="left">
+  <td style="font-size: 14px; line-height: 18px; font-family: 'Arial', 'Helvetica', sans-serif; color: #333333; margin: 0 0 5px; padding: 0;word-break: break-word;" align="left">
+    $!{content.teaser}
+    <if(continueReading === true)>
+      <common-cta-element link-url=contentUrl link-text="HEAR MORE" />
+    </if>
+  </td>
+</tr>
+<common-table-hr-element />

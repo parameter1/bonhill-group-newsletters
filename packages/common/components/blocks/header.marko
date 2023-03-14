@@ -1,11 +1,197 @@
-$ const { config } = out.global
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+import { get } from "@parameter1/base-cms-object-path";
 
+$ const { website, config } = out.global
 $ const { newsletter, date } = input;
 
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const name = (newsletterConfig.name || newsletter.name);
 
-<tr>
+$ const alt = defaultValue(input.alt, newsletter.name);
+
+$ const imgStyle = {
+  "max-height": "100%",
+  "max-width": "100%",
+  "box-sizing": "border-box",
+  "margin": "0",
+  "position": "relative",
+  "display": "block",
+};
+
+<div class="emptyContainer" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:rgba(0,0,0,0);margin:0;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0">
+  <!--[if false]>
+    <div style="display: none"><![endif]--><!--[if gte mso 9]></div>
+    <div style="background-color: transparent; border:none;"><![endif]--><!--[if false]></div>
+  <![endif]-->
+  <table class="outer" style="border-collapse:collapse;width:600px;display:block" cellspacing="0" cellpadding="0" align="center" role="presentation">
+    <tbody>
+      <!--[if false]>
+        <div style="display: none"><![endif]--><!--[if gte mso 9]>
+          <tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0">
+            <td>&nbsp;</td>
+          </tr><![endif]--><!--[if false]>
+        </div>
+      <![endif]-->
+      <tr>
+        <td style="padding:15px 10px 5px;background-color:rgba(0,0,0,0);border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%">
+          <table style="display:block;width:100%;border-collapse:collapse" class="containerWrapper tbContainer multi single-line" cellspacing="0" cellpadding="0" role="presentation">
+            <tbody>
+              <tr>
+                <td class="columnContainer columnContainerWrapper" style="vertical-align:top;min-width:5px;width:388.6px;padding:0;min-height:59px;background-color:rgba(0,0,0,0)">
+                  <table style="border-collapse:collapse;min-height:59px" class="innerTable" width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                    <tbody>
+                      <tr>
+                        <td class="columnContainer inner ui-sortable" style="min-width:5px;padding:5px;vertical-align:top;word-wrap:break-word;word-break:break-word;height:49px;min-height:49px;background-color:rgba(0,0,0,0);border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%" align="left">
+                          <div style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;padding:0;margin:0">
+                            <div class="imageWrapper" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;width:100%" width="100%" align="left">
+                              <marko-newsletter-imgix
+                                src=`${newsletterConfig.newsletterLogo}`
+                                alt=alt
+                                options={ h: 49, w: 280 }
+                                attrs={ style: imgStyle }
+                              />
+                              <!-- <img src="https://mktdplp102usda.azureedge.net/org-d6cba395a2c04672b102e97fac33544f/e629f544-c0b4-eb11-8236-000d3a8747c3/9h6eHYZl4R0JzDLe8Yr-hhq6XChuzYLq7FArKlUs0OE!" style="max-height:100%;max-width:100%;box-sizing:border-box;margin:0;position:relative;display:block;top:0;left:0;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0;width:280px;height:49px" class="" width="280" height="auto" data-msdyn-tracking="true"> -->
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td class="columnContainer columnContainerWrapper" style="vertical-align:top;min-width:5px;width:191.4px;padding:0;min-height:59px;background-color:rgba(0,0,0,0)">
+                  <table style="table-layout:fixed;min-height:59px;border-collapse:collapse" class="innerTable" width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                    <tbody>
+                      <tr>
+                        <td class="columnContainer inner ui-sortable" style="min-width:5px;padding:5px;vertical-align:bottom;word-wrap:break-word;word-break:break-word;height:49px;min-height:49px;background-color:rgba(0,0,0,0);border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%" align="left">
+                          <!--[if false]>
+                            <div style="display: none"><![endif]--><!--[if gte mso 9]>
+                              <table width="182" style="table-layout: fixed;border-collapse: collapse; width: 182px; padding-top: 5px;padding-bottom: 5px; padding-left: 0px;padding-right: 0px;" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top"><![endif]--><!--[if false]>
+                            </div>
+                          <![endif]-->
+                          <div class="none" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;margin:0;padding:0">
+                            <div class="dividerWrapper" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;padding-top:5px;padding-bottom:5px" align="center">
+                              <table style="padding:0;margin:0;width:100%;border-collapse:collapse" class="" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr style="padding:0">
+                                    <td style="margin:0;padding:0;vertical-align:top;border-bottom:4px solid #fff">
+                                      <p style="mso-line-height-rule:at-least;margin:0;padding:0;line-height:0;width:100%">
+                                        <span style="display:inline-block;line-height:0">
+                                          <!--[if gte mso 9]><br/><![endif]-->
+                                          &nbsp;
+                                        </span>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <!--[if false]>
+                            <div style="display: none"><![endif]--><!--[if gte mso 9]>
+                              </td>
+                              </tr>
+                              </table><![endif]--><!--[if false]>
+                            </div>
+                          <![endif]-->
+                          <div style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;padding:0;margin:0">
+                            <div class="imageWrapper" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent" align="Center">
+                              <marko-newsletter-imgix
+                                src=`${newsletterConfig.companyLogo}`
+                                alt=alt
+                                options={ w: 171, h: 33 }
+                                attrs={ style: imgStyle }
+                              />
+                              <!-- <img src="https://mktdplp102usda.azureedge.net/org-d6cba395a2c04672b102e97fac33544f/e39cc874-d670-eb11-a812-0022481a69ba/J5pilQbGGqllgIdV1eR_J59svsM0-K3cYnn45c0gd_U!" style="max-height:100%;max-width:100%;box-sizing:border-box;margin:0;position:relative;display:block;top:0;left:0;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0;width:171px;height:33px" class="" width="171" height="33"> -->
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!--[if false]>
+        <div style="display: none"><![endif]--><!--[if gte mso 9]>
+          <tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0">
+            <td>&nbsp;</td>
+          </tr><![endif]--><!--[if false]>
+        </div>
+      <![endif]-->
+    </tbody>
+  </table>
+</div>
+<div class="" style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:rgba(0,0,0,0);margin:0;border-top-left-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0">
+  <!--[if false]>
+    <div style="display: none"><![endif]--><!--[if gte mso 9]></div>
+    <div style="background-color: transparent; border:none;"><![endif]--><!--[if false]></div>
+  <![endif]-->
+  <table class="outer" style="border-collapse:collapse;width:600px;display:block" cellspacing="0" cellpadding="0" align="center" role="presentation">
+    <tbody>
+      <!--[if false]>
+        <div style="display: none"><![endif]--><!--[if gte mso 9]>
+          <tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0">
+            <td>&nbsp;</td>
+          </tr><![endif]--><!--[if false]>
+        </div>
+      <![endif]-->
+      <tr>
+        <td style="padding:5px 0;background-color:rgba(0,0,0,0);border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%">
+          <table style="display:block;width:100%;border-collapse:collapse" class="containerWrapper tbContainer" cellspacing="0" cellpadding="0" role="presentation">
+            <tbody>
+              <tr>
+                <td class="columnContainer" style="vertical-align:top;min-width:5px;width:600px;padding:0;background-color:#000">
+                  <table style="border-collapse:collapse" width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                    <tbody>
+                      <tr>
+                        <td class="inner ui-sortable" style="min-width:5px;padding:5px 10px;vertical-align:top;word-wrap:break-word;word-break:break-word;background-color:#000;border-width:1px;border-style:none;border-color:#000;background-size:cover;border-radius:0;background-position:50% 50%" align="left">
+                          <div style="font-family:Verdana,Arial,sans-serif;font-size:14px;color:#000;background-color:transparent;margin:0">
+                            <!--[if false]>
+                              <div style="display: none"> <![endif]--><!--[if gte mso 9]>
+                                <p style="margin: 0px; padding: 0px; line-height: 125%;">
+                                  <span style="display: inline-block; color: rgb(255, 255, 255);">
+                                    <span style="display: inline-block; font-size: 13px;"><strong>The pulse of the financial advisory industry</strong></span>
+                                  </span>
+                                </p> <![endif]--><!--[if false]>
+                              </div>
+                              <![endif]-->
+                            <!--[if !mso]> <!---->
+                            <p style="margin:0;padding:0;line-height:20px;mso-line-height-rule:at-least">
+                              <span style="line-height:125%;display:inline-block;color:#fff">
+                                <span style="line-height:125%;display:inline-block;font-size:13px">
+                                  <strong>The pulse of the financial advisory industry</strong>
+                                </span>
+                              </span>
+                            </p>
+                            <!--<![endif]-->
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!--[if false]>
+        <div style="display: none"> <![endif]--><!--[if gte mso 9]>
+          <tr style="padding: 0px;mso-line-height-rule: exactly;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height="0">
+            <td>&nbsp;</td>
+          </tr> <![endif]-->
+          <!--[if false]>
+        </div>
+      <![endif]-->
+    </tbody>
+  </table>
+</div>
+<!-- <tr>
   <td align="center" valign="top" bgcolor="#2f3031">
     <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
       <common-table-spacer-element height="12" />
@@ -29,4 +215,4 @@ $ const name = (newsletterConfig.name || newsletter.name);
     </table>
   </td>
 </tr>
-<common-table-spacer-element />
+<common-table-spacer-element /> -->

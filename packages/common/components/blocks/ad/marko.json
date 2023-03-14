@@ -17,7 +17,7 @@
   "<common-ad-banner-ad-block>": {
     "template": "./banner-ad.marko"
   },
-  "<common-ad-big-banner-ad-block>": {
-    "template": "./big-banner-ad.marko"
+  "<common-ad-lower-banner-ad-block>": {
+    "template": "./lower-banner-ad.marko"
   }
 }

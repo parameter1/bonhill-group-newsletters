@@ -1,12 +1,3 @@
-<!-- import { get, getAsArray } from "@parameter1/base-cms-object-path";
-import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
-import { URLSearchParams } from "url";
-
-$ const { content, urlParams } = input;
-
-$ const continueReading = defaultValue(input.continueReading, false);
-$ const queryString = (urlParams && content.type !== 'promotion') ? `?${new URLSearchParams(urlParams)}` : "";
-$ const contentUrl = `${content.siteContext.url}${queryString}` -->
 $ const { content, contentUrl, continueReading } = input;
 
 $ const podcastTagStyle = {

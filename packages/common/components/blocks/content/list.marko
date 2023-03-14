@@ -4,10 +4,8 @@ import queryFragment from "@bonhill-group/package-common/graphql/fragments/conte
 
 $ const { sectionName, date, newsletter } = input;
 
-$ const withImage = defaultValue(input.withImage, false);
-$ const imagePosition = defaultValue(input.imagePosition, 'right');
-$ const withHeader = defaultValue(input.withHeader, false);
 $ const withSection = defaultValue(input.withSection, true);
+$ const withHeader = defaultValue(input.withHeader, false);
 $ const continueReading = defaultValue(input.continueReading, false);
 $ const urlParams = defaultValue(input.urlParams, false);
 
@@ -28,11 +26,9 @@ $ const queryParams = {
     <for|content| of=nodes>
       <common-content-list-item-block
         content=content
-        with-section=withSection
-        with-image=withImage
-        image-position=imagePosition
         continue-reading=continueReading
         url-params=urlParams
+        section-name=sectionName
       />
     </for>
   </if>

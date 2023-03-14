@@ -1,19 +1,15 @@
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
 $ const { linkUrl } = input;
-$ const linkText = defaultValue(input.linkText, 'Continue Reading');
+$ const linkText = defaultValue(input.linkText, 'READ MORE');
 
 $ const linkStyle = {
-  "font-size": "17px",
-  "line-height": "23px",
-  "color": "#3475b6",
-  "font-weight": "400",
-  "text-decoration": "none",
+  "color": "#ffffff",
   ...input.linkStyle,
 };
 
 <common-link-element
-  link-text="Continue Reading"
+  link-text=linkText
   link-url=linkUrl
   link-style=linkStyle
 />

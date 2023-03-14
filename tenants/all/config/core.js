@@ -1,10 +1,13 @@
-// const brands = require('./brands');
 // const emailX = require('./email-x');
-// const nativeX = require('./native-x');
 
-// const config = {
-//   emailX,
-//   nativeX,
-// };
+const config = {
+  // emailX,
+  // },
+  'daily-pulse': {
+    name: 'Daily Pulse',
+    newsletterLogo: '/files/base/bonhill/all/image/static/in/daily-pulse.png',
+    companyLogo: '/files/base/bonhill/all/image/static/in/poweredBy-logo.jpeg',
+  },
+};
 
-// module.exports = config;
+module.exports = config;

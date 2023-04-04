@@ -23,5 +23,6 @@
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
     "lerna": "^3.22.1"
-  }
+  },
+  "version": "0.0.1"
 }

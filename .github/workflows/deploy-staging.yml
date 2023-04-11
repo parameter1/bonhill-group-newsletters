@@ -77,7 +77,7 @@ jobs:
     strategy:
       matrix:
         namespace:
-          - staging-newsletters-leonis
+          - leonis-newsletters
         tenant:
           - all
     steps:
@@ -88,6 +88,6 @@ jobs:
             basecms-newsletter ${{ env.IMG_PREFIX }}-${{ matrix.tenant }} \
             ${{ env.ECR_REGISTRY }}/${{ env.IMG_PREFIX }}-${{ matrix.tenant }}:${{ needs.version.outputs.version }}
         env:
-          RANCHER_CLUSTERID: ${{ secrets.RANCHER_CLUSTERID_BASECMS }}
+          RANCHER_CLUSTERID: ${{ secrets.RANCHER_CLUSTERID_STAGING }}
           RANCHER_TOKEN: ${{ secrets.RANCHER_TOKEN }}
           RANCHER_URL: ${{ secrets.RANCHER_URL }}

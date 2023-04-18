@@ -30,7 +30,6 @@ $ const newsletterConfig = config.get(newsletter.alias);
       newsletter=newsletter
       date=date
       section-name="Main"
-      continue-reading=true
       limit=3
     />
 
@@ -39,7 +38,15 @@ $ const newsletterConfig = config.get(newsletter.alias);
       newsletter=newsletter
       date=date
       section-name="Sponsored"
-      continue-reading=true
+      limit=1
+    />
+
+    <common-content-list-block
+      data=data
+      newsletter=newsletter
+      date=date
+      section-name="Main"
+      skip=3
       limit=1
     />
 
@@ -53,19 +60,20 @@ $ const newsletterConfig = config.get(newsletter.alias);
       data=data
       newsletter=newsletter
       date=date
-      section-name="Main"
-      continue-reading=true
-      skip=3
-      limit=10
+      section-name="Podcast"
+      limit=1
     />
 
     <common-content-list-block
       data=data
       newsletter=newsletter
       date=date
-      section-name="Podcast"
-      continue-reading=true
+      section-name="Main"
+      skip=3
+      limit=10
     />
+
+
 
     </@body>
     </common-body-wrapper-block>

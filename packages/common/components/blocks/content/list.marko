@@ -6,15 +6,14 @@ $ const { sectionName, date, newsletter } = input;
 
 $ const withSection = defaultValue(input.withSection, true);
 $ const withHeader = defaultValue(input.withHeader, false);
-$ const continueReading = defaultValue(input.continueReading, false);
 $ const urlParams = defaultValue(input.urlParams, false);
 
 $ const queryParams = {
   date: date.valueOf(),
   newsletterId: newsletter.id,
   sectionName,
-  limit: input.limit || 3,
-  skip: input.skip || 0,
+  limit: input.limit,
+  skip: input.skip,
   queryFragment,
 };
 
@@ -26,7 +25,6 @@ $ const queryParams = {
     <for|content| of=nodes>
       <common-content-list-item-block
         content=content
-        continue-reading=continueReading
         url-params=urlParams
         section-name=sectionName
       />
